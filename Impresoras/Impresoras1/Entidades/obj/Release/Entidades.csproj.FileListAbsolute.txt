@@ -1,0 +1,12 @@
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\Entidades.dll.config
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\Entidades.dll
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\Entidades.pdb
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\EntityFramework.dll
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\EntityFramework.xml
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\obj\Release\Entidades.csproj.AssemblyReference.cache
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\obj\Release\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\obj\Release\Entidades.csproj.CopyComplete
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\obj\Release\Entidades.dll
+C:\Users\emanuel.salgado\source\repos\Impresoras\Entidades\obj\Release\Entidades.pdb

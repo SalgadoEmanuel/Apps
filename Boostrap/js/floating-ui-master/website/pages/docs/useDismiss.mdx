@@ -1,0 +1,117 @@
+# useDismiss
+
+Adds listeners that dismiss (close) the floating element.
+
+```js /useDismiss/
+import {
+  useFloating,
+  useInteractions,
+  useDismiss,
+} from '@floating-ui/react-dom-interactions';
+
+// ...
+const {context} = useFloating();
+const {getReferenceProps, getFloatingProps} = useInteractions([
+  useDismiss(context, {
+    // props
+  }),
+]);
+```
+
+## Props
+
+```js
+interface Props {
+  enabled?: boolean;
+  escapeKey?: boolean;
+  referencePointerDown?: boolean;
+  outsidePointerDown?: boolean;
+  ancestorScroll?: boolean;
+  bubbles?: boolean;
+}
+```
+
+### enabled
+
+default: `true{:js}`
+
+Conditionally enable/disable the hook.
+
+```js
+useDismiss(context, {
+  enabled: false,
+});
+```
+
+### escapeKey
+
+default: `true{:js}`
+
+Whether to dismiss the floating element upon pressing the `esc`
+key.
+
+```js
+useDismiss(context, {
+  escapeKey: false,
+});
+```
+
+### referencePointerDown
+
+default: `false{:js}`
+
+Whether to dismiss the floating element upon pointer down of the
+reference element.
+
+```js
+useDismiss(context, {
+  referencePointerDown: true,
+});
+```
+
+### outsidePointerDown
+
+default: `true{:js}`
+
+Whether to dismiss the floating element upon pointer down outside
+of both the floating and reference elements.
+
+```js
+useDismiss(context, {
+  outsidePointerDown: false,
+});
+```
+
+### ancestorScroll
+
+default: `false{:js}`
+
+Whether to dismiss the floating element upon scrolling an
+overflow ancestor.
+
+```js
+useDismiss(context, {
+  ancestorScroll: true,
+});
+```
+
+### bubbles
+
+default: `true{:js}`
+
+When dealing with nested floating elements, this determines
+whether the dismissal bubbles through the entire
+`<FloatingTree />{:js}` or stops at the current node.
+
+When `false{:js}`, the floating element must have focus inside
+it.
+
+Generally, nested modal dialogs (where focus cannot escape the
+current node) will prefer no bubbling, while other nested
+floating elements will prefer bubbling.
+
+```js
+useDismiss(context, {
+  bubbles: false,
+});
+```

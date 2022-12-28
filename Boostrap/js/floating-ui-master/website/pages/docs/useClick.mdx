@@ -1,0 +1,86 @@
+# useClick
+
+Adds click event listeners that change the open state.
+
+```js /useClick/
+import {
+  useFloating,
+  useInteractions,
+  useClick,
+} from '@floating-ui/react-dom-interactions';
+
+// ...
+const {context} = useFloating();
+const {getReferenceProps, getFloatingProps} = useInteractions([
+  useClick(context, {
+    // props
+  }),
+]);
+```
+
+## Props
+
+```js
+interface Props {
+  enabled?: boolean;
+  pointerDown?: boolean;
+  toggle?: boolean;
+  ignoreMouse?: boolean;
+}
+```
+
+### enabled
+
+default: `true{:js}`
+
+Conditionally enable/disable the hook.
+
+```js
+useClick(context, {
+  enabled: false,
+});
+```
+
+### pointerDown
+
+default: `false{:js}`
+
+Whether to prefer the `pointerdown{:.string}` event over
+`click{:.string}` (for faster feedback). Keyboard clicks will
+continue to work.
+
+```js
+useClick(context, {
+  pointerDown: true,
+});
+```
+
+### toggle
+
+default: `true{:js}`
+
+Whether to toggle the open state with repeated clicks.
+
+```js
+useClick(context, {
+  toggle: false,
+});
+```
+
+### ignoreMouse
+
+default: `false{:js}`
+
+Whether to ignore the logic for mouse input (for example, if
+`useHover(){:js}` is also being used).
+
+When `useHover(){:js}` and `useClick(){:js}` are used together,
+clicking the reference element after hovering it will keep the
+floating element open even once the cursor leaves. This may be
+not be desirable in some cases.
+
+```js
+useClick(context, {
+  ignoreMouse: true,
+});
+```
